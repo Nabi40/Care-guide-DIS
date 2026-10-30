@@ -1,0 +1,24 @@
+# Runtime
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+sqlalchemy>=2.0
+pydantic>=2.6
+pypdfium2>=5.0         # digital PDF text + page rendering
+pytesseract>=0.3.10    # OCR (needs the `tesseract` binary on PATH)
+pillow>=10.0
+pandas>=2.0
+openpyxl>=3.1          # .xlsx
+xlrd>=2.0              # .xls
+python-dateutil>=2.9
+numpy>=1.26
+httpx>=0.27            # LLM extraction via a local Ollama server
+sentence-transformers>=3.0  # semantic search (downloads a ~90 MB model on first start)
+# Postgres in production (optional): psycopg[binary]>=3.1
+
+# Test / evaluation
+pytest>=8.0
+pikepdf>=9.0           # encrypted PDF fixtures
+playwright>=1.40       # browser test (then: playwright install chromium)
+reportlab>=4.0         # synthetic invoice PDFs
+xlwt>=1.3              # .xls fixtures for tests

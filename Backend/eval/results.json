@@ -1,0 +1,1518 @@
+{
+ "dataset": {
+  "files": 99,
+  "valid_files": 88,
+  "expected_failure_files": 11,
+  "invoices_labeled": 134
+ },
+ "document_success_rate_pct": 100.0,
+ "document_failure_rate_pct": 0.0,
+ "failure_handling": {
+  "expected_failures": 11,
+  "handled_with_correct_error_code": 11,
+  "details": [
+   {
+    "file": "corrupt_garbage.pdf",
+    "expected": "corrupted_file",
+    "got": "corrupted_file"
+   },
+   {
+    "file": "corrupt_empty_body.pdf",
+    "expected": "corrupted_file",
+    "got": "corrupted_file"
+   },
+   {
+    "file": "corrupt_zip.xlsx",
+    "expected": "corrupted_file",
+    "got": "corrupted_file"
+   },
+   {
+    "file": "corrupt_ole.xls",
+    "expected": "corrupted_file",
+    "got": "corrupted_file"
+   },
+   {
+    "file": "corrupt_png.png",
+    "expected": "corrupted_file",
+    "got": "corrupted_file"
+   },
+   {
+    "file": "corrupt_tiff.tiff",
+    "expected": "corrupted_file",
+    "got": "corrupted_file"
+   },
+   {
+    "file": "corrupt_blank.csv",
+    "expected": "corrupted_file",
+    "got": "corrupted_file"
+   },
+   {
+    "file": "truncated.pdf",
+    "expected": "corrupted_file",
+    "got": "corrupted_file"
+   },
+   {
+    "file": "truncated.png",
+    "expected": "corrupted_file",
+    "got": "corrupted_file"
+   },
+   {
+    "file": "encrypted.pdf",
+    "expected": "encrypted_file",
+    "got": "encrypted_file"
+   },
+   {
+    "file": "blank_scan.png",
+    "expected": "no_text_extracted",
+    "got": "no_text_extracted"
+   }
+  ]
+ },
+ "accuracy_overall": {
+  "invoices_labeled": 134,
+  "invoices_found": 134,
+  "invoice_recall_pct": 100.0,
+  "fully_correct_pct": 85.1,
+  "field_accuracy_pct": {
+   "invoice_number": 92.5,
+   "invoice_date": 97.0,
+   "supplier_name": 94.8,
+   "customer_name": 95.5,
+   "subtotal": 97.8,
+   "tax": 97.8,
+   "total": 96.3,
+   "currency": 100.0
+  },
+  "all_fields_micro_pct": 96.5,
+  "line_item_precision_pct": 95.6,
+  "line_item_recall_pct": 92.9,
+  "wrong_but_flagged_pct": 90.0,
+  "wrong_invoices": 20,
+  "spurious_extra_records": 0
+ },
+ "accuracy_by_category": {
+  "csv_register": {
+   "invoices_labeled": 20,
+   "invoices_found": 20,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 100.0,
+   "field_accuracy_pct": {
+    "invoice_number": 100.0,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 100.0,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 100.0,
+   "wrong_but_flagged_pct": null,
+   "wrong_invoices": 0,
+   "spurious_extra_records": 0
+  },
+  "digital_pdf": {
+   "invoices_labeled": 30,
+   "invoices_found": 30,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 100.0,
+   "field_accuracy_pct": {
+    "invoice_number": 100.0,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 100.0,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 100.0,
+   "wrong_but_flagged_pct": null,
+   "wrong_invoices": 0,
+   "spurious_extra_records": 0
+  },
+  "digital_pdf_multi": {
+   "invoices_labeled": 24,
+   "invoices_found": 24,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 100.0,
+   "field_accuracy_pct": {
+    "invoice_number": 100.0,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 100.0,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 100.0,
+   "wrong_but_flagged_pct": null,
+   "wrong_invoices": 0,
+   "spurious_extra_records": 0
+  },
+  "duplicate_xlsx": {
+   "invoices_labeled": 4,
+   "invoices_found": 4,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 100.0,
+   "field_accuracy_pct": {
+    "invoice_number": 100.0,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 100.0,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 100.0,
+   "wrong_but_flagged_pct": null,
+   "wrong_invoices": 0,
+   "spurious_extra_records": 0
+  },
+  "image_jpeg": {
+   "invoices_labeled": 4,
+   "invoices_found": 4,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 75.0,
+   "field_accuracy_pct": {
+    "invoice_number": 100.0,
+    "invoice_date": 100.0,
+    "supplier_name": 75.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 96.9,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 100.0,
+   "wrong_but_flagged_pct": 0.0,
+   "wrong_invoices": 1,
+   "spurious_extra_records": 0
+  },
+  "image_png": {
+   "invoices_labeled": 6,
+   "invoices_found": 6,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 33.3,
+   "field_accuracy_pct": {
+    "invoice_number": 83.3,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 97.9,
+   "line_item_precision_pct": 96.0,
+   "line_item_recall_pct": 88.9,
+   "wrong_but_flagged_pct": 100.0,
+   "wrong_invoices": 4,
+   "spurious_extra_records": 0
+  },
+  "image_tiff": {
+   "invoices_labeled": 3,
+   "invoices_found": 3,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 0.0,
+   "field_accuracy_pct": {
+    "invoice_number": 100.0,
+    "invoice_date": 100.0,
+    "supplier_name": 66.7,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 95.8,
+   "line_item_precision_pct": 65.2,
+   "line_item_recall_pct": 63.8,
+   "wrong_but_flagged_pct": 66.7,
+   "wrong_invoices": 3,
+   "spurious_extra_records": 0
+  },
+  "scan_pdf_clean": {
+   "invoices_labeled": 6,
+   "invoices_found": 6,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 50.0,
+   "field_accuracy_pct": {
+    "invoice_number": 66.7,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 95.8,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 97.0,
+   "wrong_but_flagged_pct": 100.0,
+   "wrong_invoices": 3,
+   "spurious_extra_records": 0
+  },
+  "scan_pdf_moderate": {
+   "invoices_labeled": 6,
+   "invoices_found": 6,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 50.0,
+   "field_accuracy_pct": {
+    "invoice_number": 83.3,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 97.9,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 89.7,
+   "wrong_but_flagged_pct": 100.0,
+   "wrong_invoices": 3,
+   "spurious_extra_records": 0
+  },
+  "scan_pdf_poor": {
+   "invoices_labeled": 6,
+   "invoices_found": 6,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 0.0,
+   "field_accuracy_pct": {
+    "invoice_number": 0.0,
+    "invoice_date": 33.3,
+    "supplier_name": 16.7,
+    "customer_name": 0.0,
+    "subtotal": 50.0,
+    "tax": 50.0,
+    "total": 16.7,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 33.3,
+   "line_item_precision_pct": 14.3,
+   "line_item_recall_pct": 7.7,
+   "wrong_but_flagged_pct": 100.0,
+   "wrong_invoices": 6,
+   "spurious_extra_records": 0
+  },
+  "xls_single": {
+   "invoices_labeled": 3,
+   "invoices_found": 3,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 100.0,
+   "field_accuracy_pct": {
+    "invoice_number": 100.0,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 100.0,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 100.0,
+   "wrong_but_flagged_pct": null,
+   "wrong_invoices": 0,
+   "spurious_extra_records": 0
+  },
+  "xlsx_register": {
+   "invoices_labeled": 16,
+   "invoices_found": 16,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 100.0,
+   "field_accuracy_pct": {
+    "invoice_number": 100.0,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 100.0,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 100.0,
+   "wrong_but_flagged_pct": null,
+   "wrong_invoices": 0,
+   "spurious_extra_records": 0
+  },
+  "xlsx_single": {
+   "invoices_labeled": 6,
+   "invoices_found": 6,
+   "invoice_recall_pct": 100.0,
+   "fully_correct_pct": 100.0,
+   "field_accuracy_pct": {
+    "invoice_number": 100.0,
+    "invoice_date": 100.0,
+    "supplier_name": 100.0,
+    "customer_name": 100.0,
+    "subtotal": 100.0,
+    "tax": 100.0,
+    "total": 100.0,
+    "currency": 100.0
+   },
+   "all_fields_micro_pct": 100.0,
+   "line_item_precision_pct": 100.0,
+   "line_item_recall_pct": 100.0,
+   "wrong_but_flagged_pct": null,
+   "wrong_invoices": 0,
+   "spurious_extra_records": 0
+  }
+ },
+ "fuzzy_field_accuracy_pct": {
+  "invoice_number": 93.3,
+  "invoice_date": 97.0,
+  "supplier_name": 96.3,
+  "customer_name": 96.3,
+  "subtotal": 97.8,
+  "tax": 97.8,
+  "total": 96.3,
+  "currency": 100.0
+ },
+ "invented_values": {},
+ "silent_wrong_invoices": [
+  {
+   "file": "image_07.jpg",
+   "wrong_fields": [
+    "supplier_name"
+   ],
+   "items_ok": true
+  },
+  {
+   "file": "image_11.tiff",
+   "wrong_fields": [
+    "supplier_name"
+   ],
+   "items_ok": false
+  }
+ ],
+ "validation": {
+  "injected_error_detection_pct": {
+   "total_mismatch": 100.0,
+   "line_math": 76.5,
+   "missing_number": 100.0,
+   "duplicate": 100.0
+  },
+  "injected_flagged_for_review_pct": {
+   "total_mismatch": 100.0,
+   "line_math": 100.0,
+   "missing_number": 100.0,
+   "duplicate": 100.0
+  },
+  "injected_counts": {
+   "total_mismatch": 16,
+   "line_math": 17,
+   "missing_number": 10,
+   "duplicate": 4
+  },
+  "clean_invoices": 87,
+  "clean_flagged_for_review_pct": 34.5,
+  "clean_flagged_for_review_digital_pct": 28.8,
+  "clean_with_error_severity_pct": 11.5,
+  "clean_flag_reasons": [
+   [
+    "AMBIGUOUS_DATE,LOW_CONFIDENCE",
+    20
+   ],
+   [
+    "MISSING_FIELD",
+    3
+   ],
+   [
+    "SUBTOTAL_MISMATCH",
+    2
+   ],
+   [
+    "LOW_CONFIDENCE,MISSING_FIELD,SUBTOTAL_MISMATCH,TOTAL_MISMATCH",
+    1
+   ],
+   [
+    "MISSING_FIELD,TOTAL_MISMATCH",
+    1
+   ],
+   [
+    "MISSING_FIELD,SUBTOTAL_MISMATCH,TOTAL_MISMATCH",
+    1
+   ],
+   [
+    "LOW_CONFIDENCE,MISSING_FIELD",
+    1
+   ],
+   [
+    "LINE_ITEM_MATH,SUBTOTAL_MISMATCH",
+    1
+   ]
+  ]
+ },
+ "timing": {
+  "total_seconds": 18.8,
+  "mean_s": 0.209,
+  "median_s": 0.015,
+  "p95_s": 0.706,
+  "by_category_mean_s": {
+   "csv_register": 0.014,
+   "digital_pdf": 0.012,
+   "digital_pdf_multi": 0.023,
+   "duplicate_xlsx": 0.013,
+   "image_jpeg": 0.527,
+   "image_png": 0.566,
+   "image_tiff": 0.579,
+   "scan_pdf_clean": 0.485,
+   "scan_pdf_moderate": 0.728,
+   "scan_pdf_poor": 0.512,
+   "xls_single": 0.011,
+   "xlsx_register": 0.022,
+   "xlsx_single": 0.012
+  },
+  "ocr_pages": 32,
+  "seconds_per_ocr_page_incl_extraction": 0.55
+ },
+ "documents": [
+  {
+   "file": "digital_00.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.026,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_01.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.013,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_02.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.019,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_03.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_04.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_05.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_06.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_07.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.016,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_08.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.011,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_09.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_10.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_11.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_12.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_13.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.013,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_14.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.009,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_15.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.014,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_16.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.015,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_17.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.013,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_18.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.013,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_19.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.014,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_20.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.009,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_21.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.009,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_22.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.009,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_23.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.017,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_24.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_25.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.011,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_26.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_27.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_28.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "digital_29.pdf",
+   "category": "digital_pdf",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.011,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "batch_0.pdf",
+   "category": "digital_pdf_multi",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.023,
+   "pages": 6,
+   "invoices": 6,
+   "ocr_conf": null
+  },
+  {
+   "file": "batch_1.pdf",
+   "category": "digital_pdf_multi",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.023,
+   "pages": 6,
+   "invoices": 6,
+   "ocr_conf": null
+  },
+  {
+   "file": "batch_2.pdf",
+   "category": "digital_pdf_multi",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.025,
+   "pages": 6,
+   "invoices": 6,
+   "ocr_conf": null
+  },
+  {
+   "file": "batch_3.pdf",
+   "category": "digital_pdf_multi",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.022,
+   "pages": 6,
+   "invoices": 6,
+   "ocr_conf": null
+  },
+  {
+   "file": "scan_clean_0.pdf",
+   "category": "scan_pdf_clean",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.491,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 94.0
+  },
+  {
+   "file": "scan_clean_1.pdf",
+   "category": "scan_pdf_clean",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.495,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 92.1
+  },
+  {
+   "file": "scan_clean_2.pdf",
+   "category": "scan_pdf_clean",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.504,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 91.5
+  },
+  {
+   "file": "scan_clean_3.pdf",
+   "category": "scan_pdf_clean",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.47,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 93.0
+  },
+  {
+   "file": "scan_clean_4.pdf",
+   "category": "scan_pdf_clean",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.438,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 95.3
+  },
+  {
+   "file": "scan_clean_5.pdf",
+   "category": "scan_pdf_clean",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.515,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 89.7
+  },
+  {
+   "file": "scan_moderate_0.pdf",
+   "category": "scan_pdf_moderate",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.706,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 79.9
+  },
+  {
+   "file": "scan_moderate_1.pdf",
+   "category": "scan_pdf_moderate",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.59,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 95.5
+  },
+  {
+   "file": "scan_moderate_2.pdf",
+   "category": "scan_pdf_moderate",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.863,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 93.0
+  },
+  {
+   "file": "scan_moderate_3.pdf",
+   "category": "scan_pdf_moderate",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.584,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 94.9
+  },
+  {
+   "file": "scan_moderate_4.pdf",
+   "category": "scan_pdf_moderate",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.856,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 89.6
+  },
+  {
+   "file": "scan_moderate_5.pdf",
+   "category": "scan_pdf_moderate",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.768,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 93.1
+  },
+  {
+   "file": "scan_poor_0.pdf",
+   "category": "scan_pdf_poor",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.492,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 65.6
+  },
+  {
+   "file": "scan_poor_1.pdf",
+   "category": "scan_pdf_poor",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.515,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 69.2
+  },
+  {
+   "file": "scan_poor_2.pdf",
+   "category": "scan_pdf_poor",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.479,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 74.6
+  },
+  {
+   "file": "scan_poor_3.pdf",
+   "category": "scan_pdf_poor",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.533,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 67.0
+  },
+  {
+   "file": "scan_poor_4.pdf",
+   "category": "scan_pdf_poor",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.579,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 76.3
+  },
+  {
+   "file": "scan_poor_5.pdf",
+   "category": "scan_pdf_poor",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.476,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 68.9
+  },
+  {
+   "file": "image_00.png",
+   "category": "image_png",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.585,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 91.7
+  },
+  {
+   "file": "image_01.png",
+   "category": "image_png",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.576,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 79.5
+  },
+  {
+   "file": "image_02.png",
+   "category": "image_png",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.617,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 77.0
+  },
+  {
+   "file": "image_03.png",
+   "category": "image_png",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.558,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 93.8
+  },
+  {
+   "file": "image_04.png",
+   "category": "image_png",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.565,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 81.6
+  },
+  {
+   "file": "image_05.png",
+   "category": "image_png",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.493,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 78.2
+  },
+  {
+   "file": "image_06.jpg",
+   "category": "image_jpeg",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.516,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 92.5
+  },
+  {
+   "file": "image_07.jpg",
+   "category": "image_jpeg",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.527,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 93.8
+  },
+  {
+   "file": "image_08.jpg",
+   "category": "image_jpeg",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.478,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 93.1
+  },
+  {
+   "file": "image_09.jpg",
+   "category": "image_jpeg",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.587,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 92.3
+  },
+  {
+   "file": "image_10.tiff",
+   "category": "image_tiff",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.305,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 90.1
+  },
+  {
+   "file": "image_11.tiff",
+   "category": "image_tiff",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.374,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": 92.5
+  },
+  {
+   "file": "image_12.tiff",
+   "category": "image_tiff",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 1.059,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": 92.2
+  },
+  {
+   "file": "sheet_0.xlsx",
+   "category": "xlsx_single",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.014,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "sheet_1.xlsx",
+   "category": "xlsx_single",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.011,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "sheet_2.xlsx",
+   "category": "xlsx_single",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.014,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "sheet_3.xlsx",
+   "category": "xlsx_single",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "sheet_4.xlsx",
+   "category": "xlsx_single",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.012,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "sheet_5.xlsx",
+   "category": "xlsx_single",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "register_0.xlsx",
+   "category": "xlsx_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.019,
+   "pages": 2,
+   "invoices": 4,
+   "ocr_conf": null
+  },
+  {
+   "file": "register_1.xlsx",
+   "category": "xlsx_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.015,
+   "pages": 2,
+   "invoices": 3,
+   "ocr_conf": null
+  },
+  {
+   "file": "register_2.xlsx",
+   "category": "xlsx_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.025,
+   "pages": 2,
+   "invoices": 4,
+   "ocr_conf": null
+  },
+  {
+   "file": "register_3.xlsx",
+   "category": "xlsx_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.027,
+   "pages": 2,
+   "invoices": 5,
+   "ocr_conf": null
+  },
+  {
+   "file": "legacy_0.xls",
+   "category": "xls_single",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.014,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "legacy_1.xls",
+   "category": "xls_single",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.01,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "legacy_2.xls",
+   "category": "xls_single",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.008,
+   "pages": 1,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "export_0.csv",
+   "category": "csv_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.015,
+   "pages": 1,
+   "invoices": 3,
+   "ocr_conf": null
+  },
+  {
+   "file": "export_1.csv",
+   "category": "csv_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.016,
+   "pages": 1,
+   "invoices": 4,
+   "ocr_conf": null
+  },
+  {
+   "file": "export_2.csv",
+   "category": "csv_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.013,
+   "pages": 1,
+   "invoices": 3,
+   "ocr_conf": null
+  },
+  {
+   "file": "export_3.csv",
+   "category": "csv_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.013,
+   "pages": 1,
+   "invoices": 3,
+   "ocr_conf": null
+  },
+  {
+   "file": "export_4.csv",
+   "category": "csv_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.012,
+   "pages": 1,
+   "invoices": 3,
+   "ocr_conf": null
+  },
+  {
+   "file": "export_5.csv",
+   "category": "csv_register",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.015,
+   "pages": 1,
+   "invoices": 4,
+   "ocr_conf": null
+  },
+  {
+   "file": "dup_0.xlsx",
+   "category": "duplicate_xlsx",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.012,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "dup_1.xlsx",
+   "category": "duplicate_xlsx",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.013,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "dup_2.xlsx",
+   "category": "duplicate_xlsx",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.011,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "dup_3.xlsx",
+   "category": "duplicate_xlsx",
+   "status": "completed",
+   "error_code": null,
+   "seconds": 0.014,
+   "pages": 2,
+   "invoices": 1,
+   "ocr_conf": null
+  },
+  {
+   "file": "corrupt_garbage.pdf",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "corrupted_file",
+   "seconds": 0.004,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "corrupt_empty_body.pdf",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "corrupted_file",
+   "seconds": 0.003,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "corrupt_zip.xlsx",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "corrupted_file",
+   "seconds": 0.002,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "corrupt_ole.xls",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "corrupted_file",
+   "seconds": 0.002,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "corrupt_png.png",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "corrupted_file",
+   "seconds": 0.003,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "corrupt_tiff.tiff",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "corrupted_file",
+   "seconds": 0.004,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "corrupt_blank.csv",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "corrupted_file",
+   "seconds": 0.003,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "truncated.pdf",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "corrupted_file",
+   "seconds": 0.003,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "truncated.png",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "corrupted_file",
+   "seconds": 0.003,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "encrypted.pdf",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "encrypted_file",
+   "seconds": 0.024,
+   "pages": 0,
+   "invoices": 0,
+   "ocr_conf": null
+  },
+  {
+   "file": "blank_scan.png",
+   "category": "corrupt",
+   "status": "failed",
+   "error_code": "no_text_extracted",
+   "seconds": 0.199,
+   "pages": 1,
+   "invoices": 0,
+   "ocr_conf": null
+  }
+ ],
+ "stress": {
+  "digital": {
+   "pages": 1000,
+   "pdf_mb": 1.29,
+   "status": "completed",
+   "seconds": 2.7,
+   "pages_per_second": 375.3,
+   "invoices_found": 1000,
+   "invoices_all_fields_correct_pct": 100.0,
+   "flagged_for_review": 157,
+   "peak_rss_mb": 377,
+   "rss_before_mb": 365,
+   "generation_seconds": 0.7
+  },
+  "scan": [
+   {
+    "pages": 40,
+    "ocr_workers": 1,
+    "status": "completed",
+    "seconds": 30.3,
+    "seconds_per_page": 0.758,
+    "invoices_found": 39,
+    "invoice_number_and_total_correct_pct": 62.5,
+    "pdf_mb": 7.2
+   },
+   {
+    "pages": 40,
+    "ocr_workers": 4,
+    "status": "completed",
+    "seconds": 20.1,
+    "seconds_per_page": 0.501,
+    "invoices_found": 39,
+    "invoice_number_and_total_correct_pct": 62.5,
+    "pdf_mb": 7.2
+   }
+  ]
+ }
+}

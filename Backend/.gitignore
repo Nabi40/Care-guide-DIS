@@ -1,0 +1,31 @@
+# Virtual environments
+web_env/
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# App data (uploads + SQLite database)
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Generated sample invoices
+samples/
+
+# Secrets
+.env
+.env.*
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
